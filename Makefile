@@ -1,6 +1,11 @@
 # Makefile
 
 CXX = g++
+# Success with 0.13
+# CXX = ./zig/zig-linux-x86_64-0.13.0/zig c++
+# Fails with 0.14 and above
+# CXX = ./zig/zig-linux-x86_64-0.14.0/zig c++
+# CXX = ./zig/zig-linux-x86_64-0.15.0-dev.64+2a4e06bcb/zig c++
 CXXFLAGS = -fPIC
 LDFLAGS = -shared
 
