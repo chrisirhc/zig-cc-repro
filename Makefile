@@ -12,10 +12,10 @@ LDFLAGS = -shared
 all: main
 
 mylib.so: mylib.cpp
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o mylib.so mylib.cpp
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o libmylib.so mylib.cpp
 
 main: main.cpp mylib.so
-	$(CXX) -o main main.cpp -L. -l :mylib.so
+	$(CXX) -o main main.cpp -L. -lmylib
 
 clean:
 	rm -f main mylib.so
